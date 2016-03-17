@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/davidramsay/.vim/ftplugin'
+let g:netrw_dirhist_2='/Users/davidramsay/Python/roz/linguistic'
+let g:netrw_dirhist_3='/Users/davidramsay/Python/speech'
