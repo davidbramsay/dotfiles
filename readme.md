@@ -7,24 +7,24 @@ make sure zsh and links all worked
 edit .zshrc to point to oh-my-zsh on first line
 
 # add vim plugins
-'''bash
+```bash
 cd .vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/davidhalter/jedi-vim.git
 git clone https://github.com/lokaltog/vim-powerline.git
 git clone https://github.com/jistr/vim-nerdtree-tabs.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
-'''
+```
 
 # edit hostname
-'''bash
+```bash
 vim /etc/hostname
 vim /etc/hosts
 vim /etc/dhcp/dhclient.conf (set_hostname)
-'''
+```
 
 # adduser/remove user
-'''bash
+```bash
 passwd
 sudo adduser temp sudo
 -logout and login as temp
@@ -34,5 +34,5 @@ usermod -d /home/newName -m newName
 -logout and login as user
 sudo deluser temp
 sudo rm -r /home/temp
-'''
+```
 
