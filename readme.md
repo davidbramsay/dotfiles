@@ -20,7 +20,6 @@ git clone https://github.com/ctrlpvim/ctrlp.vim.git
 ```bash
 vim /etc/hostname
 vim /etc/hosts
-vim /etc/dhcp/dhclient.conf (set_hostname)
 ```
 
 # adduser/remove user
