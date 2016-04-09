@@ -35,3 +35,13 @@ sudo deluser temp
 sudo rm -r /home/temp
 ```
 
+# notes
+some issues with symlink to oh-my-zsh files.  Should be able to git clone oh-my-zsh into the dotfiles folder and create the symlink manually (```ln/ /path/to/realfile /path/to/link/location```)
+
+changing default shell - ```chsh -s $(which zsh)```
+
+sometimes doesn't work, can do 
+```
+sudo su
+chsh dramsay9 -s $(which zsh)
+```
