@@ -10,10 +10,10 @@ edit .zshrc to point to oh-my-zsh on first line
 ```bash
 cd .vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/davidhalter/jedi-vim.git
 git clone https://github.com/lokaltog/vim-powerline.git
 git clone https://github.com/jistr/vim-nerdtree-tabs.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone --recursive https://github.com/davidhalter/jedi-vim.git
 ```
 
 # edit hostname
