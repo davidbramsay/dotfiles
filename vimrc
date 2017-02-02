@@ -198,9 +198,26 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
 set foldmethod=indent
+highlight Folded ctermbg=239 ctermfg=229
+function MyFoldTextCustomized() " {{{
+    let line = getline(v:foldstart)
 
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
 
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction " }}}
+
+autocmd VimEnter * set foldtext=MyFoldTextCustomized()
 autocmd VimEnter * NERDTree
 autocmd VimEnter * NERDTreeTabsOpen
-
+autocmd VimEnter * wincmd w
 let g:nerdtree_tabs_open_on_console_startup = 1
+
