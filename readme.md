@@ -1,5 +1,10 @@
 git clone this
 
+```
+currently not totally working properly -- download oh-my-zsh first, edit script not to overwrite .oh-my-zsh
+YouCompleteMe plugin?
+```
+
 makesymlink.sh to make the symbolic links and install oh my zsh
 
 make sure zsh and links all worked
@@ -13,6 +18,7 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/lokaltog/vim-powerline.git
 git clone https://github.com/jistr/vim-nerdtree-tabs.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone https://github.com/tmhedberg/SimpylFold.git
 git clone --recursive https://github.com/davidhalter/jedi-vim.git
 ```
 
