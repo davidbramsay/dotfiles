@@ -20,7 +20,20 @@ git clone https://github.com/jistr/vim-nerdtree-tabs.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/tmhedberg/SimpylFold.git
 git clone --recursive https://github.com/davidhalter/jedi-vim.git
+git clone https://github.com/Valloric/YouCompleteMe.git
 ```
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.py --clang-completer
+
+cd ~/.vim/ftplugin  
+git clone https://github.com/ivanov/vim-ipython.git 
+mv vim-ipython/ftplugin/* .
+rm -rf vim-ipython
+```
+
 
 # edit hostname
 ```bash
