@@ -33,6 +33,10 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+#install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install cmake
+
 #install all of the vim bundles
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
