@@ -37,6 +37,10 @@ done
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install cmake
 
+#install updated vim
+brew install vim --with-override-system-vi
+
+
 #install all of the vim bundles
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
@@ -85,3 +89,6 @@ fi
 }
 
 #install_zsh
+
+#config git
+git config --global --edit
