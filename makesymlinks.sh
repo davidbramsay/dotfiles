@@ -8,9 +8,12 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gvimrc hgrc bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
+files="gvimrc hgrc bashrc vimrc vim zshrc"    # list of files/folders to symlink in homedir
 
 ##########
+
+#install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -29,6 +32,21 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+#install all of the vim bundles
+cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/lokaltog/vim-powerline.git
+git clone https://github.com/jistr/vim-nerdtree-tabs.git
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone https://github.com/tmhedberg/SimpylFold.git
+git clone --recursive https://github.com/davidhalter/jedi-vim.git
+
+git clone https://github.com/Valloric/YouCompleteMe.git
+
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.py --clang-completer
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
@@ -62,4 +80,4 @@ else
 fi
 }
 
-install_zsh
+#install_zsh
