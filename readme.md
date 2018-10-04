@@ -70,3 +70,24 @@ owning home folder/folders
 chmod -R 777 ~/ownedFolder
 chown -R dramsay ~/ownedFolder
 ```
+
+
+# for linux
+
+from user home directory:
+```
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/dramsay9/dotfiles.git
+dotfiles/makesymlinks.sh
+```
+
+edit .zshrc, replacing '/Users/<username>' with '/home/<username>'.
+  
+```
+zsh
+```
+
+and it works!
+
+
